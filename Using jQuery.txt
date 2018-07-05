@@ -1,0 +1,210 @@
+
+Loading Up the jQuery in HTML is done in the following manner
+=============================================================
+
+<!doctype html>
+<html>
+
+    <head>
+    
+        <title>jQuery</title>
+    </head>
+    
+    <body>
+        
+        <!--The first way by which we can load the jQuery is by using the local downloaded version in the following manner-->
+        
+        <script src="jQuery/jquery-3.3.1.js"></script>
+        <script src="jquery.js"></script>
+        
+        <!-- What we can also do instead is paste the cdn version of the jquery version and paste as src in the script tag-->
+        
+        <!-- Do remember to remove the http or https from the src-->
+        
+        <script
+  src="//code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+        </script>
+        
+        <!-- Now the con of using a cdn version is if the jQuery cdn server is down then it will take a lot of time to load the webpage
+
+        Instead what we do is use both the cdn as well as the local version
+
+        First we load the cdn version and if it fails then we shall load the local version
+
+        We shall use an html tag to check if the cdn version is available, if not then we shall load up the local version
+
+        We do this in the following manner-->
+        
+        <script>window.jQuery || document.write("<script src = 'jQuery/jquery-3.3.1'><\/script>");</script>
+        
+    </body>
+</html>
+
+============================================
+
+jQuery Part
+===========
+
+// The basic barebone structure of writing the jquery is as follows
+
+//$(function() {
+    //$(selector).action();
+//});
+
+$(function(){
+   
+    $('#box').hide();
+    
+});
+
+=================================================================
+
+Similarly the various actions that can be performed are as follows:
+
+CSS
+==== 
+    :- $(function(){
+   
+    $('#box').css("color", "blue");
+    
+    });
+
+FadeOut :- 
+=======
+    $(function(){
+   
+    $('#box').fadeout();
+    
+    });
+
+We mostly do functions in the jQuery script:
+===========================================
+
+$(function(){
+   
+    $("button").click(function() {
+        $("box").fadeOut(1000);
+    });
+    
+});
+
+The above function will fadeout the box when the button is clicked over a course of 1000 sec
+============================================================================================
+
+
+
+
+
+
+
+
+
+PART 2
+======
+
+JQUERY SELECTOR
+===============
+
+jQuery can be used to select ANY element from the HTML
+
+
+If we want to select multiple elements in the jQuery selector field we put comma between the elements just like css
+
+eg: $('s1, s2, s3').action();
+==============================================================
+
+
+
+COMMON SELECTORS USED
+=====================
+
+
+We have a body of an html file upon which I shall be using as a reference for the jQuery
+
+There is also a CSS part which I have not included as it is irrelevant while doing the jQuery part
+
+HTML
+====
+
+<body id="selectors">
+        
+        <h1>jQuery Selectors</h1>
+        
+        <h2>I'm a level 2 heading!</h2>
+        <p class="lead">And I'm a paragraph tag with the class of "lead".</p>
+        
+        <div id="container">
+            <h3>I'm a level 3 heading</h3>
+            <p>This is a paragraph tag <em>inside a div</em></p>
+        </div>
+        
+        <div>
+            <h4>A level 4 heading</h4>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+            </ul>
+        </div>
+        
+        <p>I'm just a standalone paragraph tag - just hanging out!</p>
+        <p>And I'm another paragraph tag.</p>
+        
+        <div>All of this wonderful HTML was coded by Brad!</div>
+        
+        
+        <!-- Load the CDN first -->
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        
+        <!-- If CDN fails to load, serve up the local version -->
+        <script>window.jQuery || document.write('<script src="js/jquery-2.1.4.js"><\/script>');</script>
+        
+        <script src="js/script.js"></script>
+    </body>
+
+
+jQuery Part
+===========
+
+CSS:
+===
+
+$(function(){
+    
+    $('h1, h2, h3').css('border', 'solid 1px red'); //Selects the h1 h2 and h3 heading
+
+    $('div#container').css('border', 'solid 1px red'); // We select the div with id of conatiner
+
+    $('p.lead').css('border', 'solid 1px red');  
+    //We select the paragraph tag with class of lead
+
+    $('li:first').css('border', 'solid 1px red'); 
+    // We use the pseudo class first which selects the first element in the li.
+
+    //We can do :last, :odd, :even as pseudo class as well
+
+    //Selectivity can also be specified in the jQuery like so
+
+    $('div em').action()
+    //Which selects all the emphasis within the div tag
+
+    Some jQuery Selectors can also be used
+
+    $(':header') //For the header
+
+    $(:contains("gardeb")) //Selects the elements which contains the word garden
+
+    We can be more specific by using the following
+
+    $(div:contains("garden"))
+    All the divs which contains the word garden.
+})
+
+
+Go to w3school to look for more selectors available and also go to
+jQuery official website to search for more. ==========================
+======================================================================
+=============

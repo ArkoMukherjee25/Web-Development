@@ -1,0 +1,128 @@
+
+HTML PART OF THE CODE
+
+=================================================
+
+<html>
+
+    <head>
+    
+        <title>Dropdown</title>
+        <link href="dropdown.css" rel="stylesheet" type="text/css">
+        
+    </head>
+    
+    <body id="container">
+    
+        
+            <ul>
+            
+                <li><a href="">Menswear
+                        <ul>
+                            <li><a href="">Jeans</a></li>
+                            <li><a href="">Trousers</a></li>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">Tshirts</a></li>
+                            <li><a href="">Accessories</a></li>
+                        </ul>
+                    </a>
+                </li><!-- End of menswear-->
+                
+                <li><a href="">Women
+                        <ul>
+                            <li><a href="">Jeans</a></li>
+                            <li><a href="">Trousers</a></li>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">Tshirts</a></li>
+                            <li><a href="">Accessories</a></li>
+                        </ul>
+                    </a>
+                </li><!-- End of womenswear-->
+                
+                <li><a href="">Children
+                        <ul>
+                            <li><a href="">Jeans</a></li>
+                            <li><a href="">Trousers</a></li>
+                            <li><a href="">Shirts</a></li>
+                            <li><a href="">Tshirts</a></li>
+                            <li><a href="">Accessories</a></li>
+                        </ul>
+                    </a>
+                </li><!-- End of children-->
+           
+                <li><a href="">Contacts
+                        <ul>
+                            <li><a href="">Address</a></li>
+                            <li><a href="">Call Us</a></li>
+                            <li><a href="">Email Us</a></li>
+                            <li><a href="">Career</a></li>
+                            <li><a href="">Terms Of Use</a></li>
+                        </ul>
+                    </a>
+                </li><!-- End of contacts-->
+            </ul>
+        
+    </body>
+
+</html>
+
+
+CSS PART OF THE CODE
+
+===============================================
+
+
+#container{
+    width:%; 
+    height:50%;
+    margin:0 auto;
+    padding:5px;
+    background-color:#f2f2f2;
+    font-family: Georgia arial sans-serif; 
+}
+ul{
+   
+    margin:o;
+    padding:0;
+    list-style:none;
+}
+ul li{
+    width:200px;
+    float:left;
+    background-color:lightgreen;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    text-transform:capitalize;
+    font-size:20;
+    margin-right:5px;
+    border-bottom:solid 1px gray;
+    border-left:solid 1px gray;
+}
+ul li a{
+    text-decoration: none;
+    color:black; 
+}
+ul li ul{
+    display:none;
+}
+ul li:hover ul{
+    display:inline-block;
+}
+ul li:hover ul li{
+    background-color:white;
+    margin-bottom:2px;
+}
+ul li ul li:hover{
+    background-color:darkblue;  
+}
+ul li ul li:hover a{
+    color:white;
+    background-color:darkblue;  
+}
+
+
+
+To run the code:
+1. Save the two parts in two separate files, the html part will have an extension of .html and the css part will
+	have an extension of .css. Keep both the files in the same folder.
