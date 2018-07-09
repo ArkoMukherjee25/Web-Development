@@ -1,0 +1,139 @@
+GET BOOTSTRAP
+=============
+
+1. go to website getbootstrap.com
+2. Best thing to do is download the bootstrap and go with other things
+3. To install bootstrap
+	1. Open a folder name mybootstrap
+	2. Put in it the bootstrap3.x.x.dst folder you just downloaded.
+	3. Also put in it a new file named index.html
+	4. Now open the text editor and open the mybootstrap folder.
+	5. Go to getting started page in getbootstrap.com and copy the sample index.html page and paste into the index.html file you just created.
+
+INDEX.HTML
+==========
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+This tells the browser that this is a responsive page and to make the width of the page equal to the device width and to make the sacling to 100%
+
+The 3 meta tags: charset, http-equiv, and name, content; should come first in the head and any other head content (title, link src (for js)) should follow these three meta tags.
+
+To hook into the bootstrap.min.css which is in the bootstrap (downloaded) folder change the directory to myboottrap in the
+<link href> part.
+
+=============================================================================
+
+
+
+
+QUICK PROTOTYPE
+===============
+
+Bootstrap gives us the freedom to quickly built a projectwithout having to code the nits and bits as we usually do while creating a website using traditional methods. 
+Bootstrap has built in themes known as framework which can be downloaded and put into the source code. This cuts down the work time by a great margin. Only the important parts needs to be coded.
+
+Go to getbootstrap.com then getting-statted then go to free examples and choose from the variety of examples given there.
+
+
+To use any one of these files click the file go to view source code by right clicking on the webpage and copy everything in it.
+Now paste the same in a new html file created inside the mybootstrap folder.
+
+Now, some things needs to be changed in this file.
+The href attributes in the link tag needs to be modified accordingly. (contd.)
+
+EXTRA SOMETHING
+===============
+
+The little icon (16*16) that appears on the tab of some pages such as google or facebook page can be applied by doing this
+
+<link rel="icon" href="image.ico">
+==========================================================
+
+(contd.) Any custom styles made by you can also be attahced in the html head tag.
+Also change the src attribute in the script tag which comes in the end of body tag (for jquery) for javascript.
+
+============================================================================================================================
+
+
+
+
+
+
+
+
+BOOTSTRAP GRID SYSTEM
+=====================
+
+Bootstrap grid system helps in designing grids. Using html and css to build a grid system for the webpage to be responsive is difficult. bootstrap makes it easy for us by giving us this grid system.
+
+
+INSTRUCTIONS
+============
+
+1. Rows : Must be placed within a container class. Container class is a fixed width layout or a container-fluid class which is a full width class. 
+Use rows to create horizontal groups of columns.
+
+2. Contents should be placed within columns and rows are immediate child of container.
+
+3. For more info go to https://getbootstrap.com/docs/4.1/examples/grid/
+
+4. Depending on my need I can use various column class like 
+.col- for extra small<576px
+.col-sm for small >=576px
+Other than these we also have .col-md- for medium .col-lg- for large .col-xl- for xtra large 
+The number of columns available are 12
+
+USE
+===
+
+To use the above grid features first we need to plug in the bootstrap css, jquery, html in the html file we are working on
+Next we need to create a class called container inside the body tag
+Next since row is the direct child of container class, hence we create a div called inside the container class
+Next inside individual row divs we can now create the col-md-x class divs
+
+eg: 
+<body>
+<div id="container">
+<div class="row">
+<div class="col-md-6 hello">Hello World</div>
+<div class="col-md-6 hello">Hello World</div>
+</body>
+
+Now, two important things
+First: This will create two colums of 6 rows each containing thwe words Hello World
+Second: We use the class name as col-md-6 hello as just by using col-md-6 we cannot style that class in style.css hence we need to give an extra name to it as well
+
+As long as the pixel count of the screen size is less than that of the class prefix used, the columns wont stack upon itself. Once smaller then it the columns will stack.
+
+
+
+
+
+
+
+
+
+
+
+
+BOOTSTRAP FORMS
+===============
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
